@@ -3,22 +3,23 @@ using UnityEngine;
 public class KeyBehaviour : MonoBehaviour
 {
     private GameObject exit;
+    private bool isTriggered = false;
     void Start()
     {
         exit = GameObject.FindWithTag("Exit");
     }
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(other.gameObject.tag);
-        Debug.Log(other.CompareTag("Player"));
-        if (other.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player"))
         {
             // Perform the action triggered by the key collision
-            DecrementKey();
+            if (!isTriggered) {
+                isTriggered = true;
+                DecrementKey();
+                Destroy(gameObject);
+            }
 
             // Destroy the key GameObject
-            Destroy(gameObject);
-             Debug.Log("object destroyed");
         }
     }
 
@@ -26,6 +27,5 @@ public class KeyBehaviour : MonoBehaviour
     {
         // Add your desired action logic here
         exit.GetComponent<ExitCheck>().DecrementKey();
-        Debug.Log("actionTriggered");
     }
 }

@@ -45,6 +45,8 @@ public class PlayerGroundMovement : MonoBehaviour
     void Update()
     {
         dir_x = Input.GetAxis("Horizontal");
+        player_anim.SetFloat("velocityx", dir_x*x_speed);
+
 
 
         if (Input.GetButtonDown("Jump") && !isJumping && environment.GetComponent<EnvironmentState>().GetState() == EnvState.Left)
@@ -105,7 +107,6 @@ public class PlayerGroundMovement : MonoBehaviour
             if (!(isCrouching && dir_x < 0f)) {
                 player_rb.velocity = new Vector2(dir_x * x_speed, player_rb.velocity.y);
             }
-            player_anim.SetFloat("velocityx", dir_x*x_speed);
 
             if (Mathf.Abs(dir_x) > 0f)
             {
