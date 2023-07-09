@@ -51,7 +51,6 @@ public class PlayerGroundMovement : MonoBehaviour
         {
             isJumping = true;
             player_rb.AddForce(Vector2.up * jump_force, ForceMode2D.Impulse);
-            Debug.Log("Jump");
 
         }
 
@@ -67,24 +66,19 @@ public class PlayerGroundMovement : MonoBehaviour
                     box_list[i].GetComponent<BoxPullMovement>().Halt();
                 }                
             }       
-            Debug.Log("Pull");    
         }
         else if(Input.GetButtonUp("Pull")) {
             isPulling = false;
-            Debug.Log("Pull cancel");
         }
 
         if (Input.GetButton("Crouch") && environment.GetComponent<EnvironmentState>().GetState() == EnvState.Right)
         {
             isCrouching = true;
-            transform.localScale = new Vector3(0.8f, 0.5f, 0.8f);
 
         }
         else
         {
             isCrouching = false;
-            transform.localScale = new Vector3(1, 1, 1);
-
         }
     }
 
@@ -92,7 +86,9 @@ public class PlayerGroundMovement : MonoBehaviour
     {
         if (!dontMove)
         {
-            player_rb.velocity = new Vector2(dir_x * x_speed, player_rb.velocity.y);
+            if (!(isCrouching && dir_x < 0f)) {
+                player_rb.velocity = new Vector2(dir_x * x_speed, player_rb.velocity.y);
+            }
             player_anim.SetFloat("velocityx", dir_x*x_speed);
 
             if (Mathf.Abs(dir_x) > 0f)
@@ -105,15 +101,15 @@ public class PlayerGroundMovement : MonoBehaviour
                 isJumping = false;
             }
 
-            // if (isCrouching)
-            // {
-            //     // Add crouch behavior here
-            //     player_anim.SetBool("Player_Crouching", true);
-            // }
-            // else
-            // {
-            //     player_anim.SetBool("Player_Crouching", false);
-            // }
+            if (isCrouching)
+            {
+                // Add crouch behavior here
+                player_anim.SetBool("Player_Crouching", true);
+            }
+            else
+            {
+                player_anim.SetBool("Player_Crouching", false);
+            }
         }
         else
         {

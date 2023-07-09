@@ -1,25 +1,7 @@
 fileFormatVersion: 2
-guid: 3445d8fdbac2d4ec6824071680889f00
+guid: 7f9e22e68f72241c8a9c7413314d87c6
 TextureImporter:
-  internalIDToNameTable:
-  - first:
-      213: -1132154611684976034
-    second: Dancer_Animation_Spritesheet_0
-  - first:
-      213: -5948669378259237197
-    second: Dancer_Animation_Spritesheet_1
-  - first:
-      213: -40714834705694121
-    second: Dancer_Animation_Spritesheet_2
-  - first:
-      213: 2151673991633466282
-    second: Dancer_Animation_Spritesheet_3
-  - first:
-      213: -8808304626318391407
-    second: Dancer_Animation_Spritesheet_4
-  - first:
-      213: 7481214069978344587
-    second: Dancer_Animation_Spritesheet_5
+  internalIDToNameTable: []
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -52,7 +34,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 0
+    filterMode: 1
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -66,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -83,14 +65,14 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -103,7 +85,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -116,7 +98,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -129,7 +111,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 0
+    textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -141,13 +123,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Dancer_Animation_Spritesheet_0
+      name: FemalePushing_All_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 16
-        height: 24
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,83 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e5a52bb0167c940f0800000000000000
-      internalID: -1132154611684976034
+      spriteID: dae439e4952fe4726a12592d18cfdb0f
+      internalID: 1511028607
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dancer_Animation_Spritesheet_1
-      rect:
-        serializedVersion: 2
-        x: 16
-        y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 3b64d96c7b4127da0800000000000000
-      internalID: -5948669378259237197
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dancer_Animation_Spritesheet_2
-      rect:
-        serializedVersion: 2
-        x: 32
-        y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7524744d21a5f6ff0800000000000000
-      internalID: -40714834705694121
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dancer_Animation_Spritesheet_3
-      rect:
-        serializedVersion: 2
-        x: 48
-        y: 0
-        width: 16
-        height: 24
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: aa372c768184cdd10800000000000000
-      internalID: 2151673991633466282
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Dancer_Animation_Spritesheet_4
+      name: FemalePushing_All_1
       rect:
         serializedVersion: 2
         x: 64
         y: 0
-        width: 16
-        height: 24
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,20 +158,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 197ccda5c9d92c580800000000000000
-      internalID: -8808304626318391407
+      spriteID: fabd61b166c844e669a9c31cbc970973
+      internalID: -1047274464
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Dancer_Animation_Spritesheet_5
+      name: FemalePushing_All_2
       rect:
         serializedVersion: 2
-        x: 80
+        x: 128
         y: 0
-        width: 16
-        height: 24
+        width: 64
+        height: 96
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,8 +179,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b8ca6b93f8c92d760800000000000000
-      internalID: 7481214069978344587
+      spriteID: 918e5347af1424b1f95f21bbcbc1973d
+      internalID: 538598784
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: FemalePushing_All_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 64
+        height: 96
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae375ce646537444c9ef3f0a5b8083a4
+      internalID: 492003487
       vertices: []
       indices: 
       edges: []
@@ -277,12 +217,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Dancer_Animation_Spritesheet_0: -1132154611684976034
-      Dancer_Animation_Spritesheet_1: -5948669378259237197
-      Dancer_Animation_Spritesheet_2: -40714834705694121
-      Dancer_Animation_Spritesheet_3: 2151673991633466282
-      Dancer_Animation_Spritesheet_4: -8808304626318391407
-      Dancer_Animation_Spritesheet_5: 7481214069978344587
+      FemalePushing_All_0: 1511028607
+      FemalePushing_All_1: -1047274464
+      FemalePushing_All_2: 538598784
+      FemalePushing_All_3: 492003487
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
