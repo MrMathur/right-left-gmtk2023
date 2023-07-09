@@ -10,6 +10,9 @@ public struct StateSettings {
 public class PlayerGroundMovement : MonoBehaviour
 {
     private Rigidbody2D player_rb;
+    public CapsuleCollider2D standingCollider;
+    public CapsuleCollider2D crouchingCollider;
+
     private GameObject environment;
     private float dir_x;
     private Animator player_anim;
@@ -27,6 +30,9 @@ public class PlayerGroundMovement : MonoBehaviour
     private bool isGrounded;
     private bool isJumping = false;
     private bool isCrouching;
+    public float raycastDistance = 1f;   // Distance of the raycast
+
+    private RaycastHit2D hit;
 
     // Start is called before the first frame update
     void Start()
@@ -37,14 +43,15 @@ public class PlayerGroundMovement : MonoBehaviour
         player_anim = GetComponent<Animator>();
         player_sr = GetComponent<SpriteRenderer>();
         box_list = GameObject.FindGameObjectsWithTag("Box");
-
+          // Start with the standing collider enabled
+        standingCollider.enabled = true;
+        crouchingCollider.enabled = false;
     }
 
     // Update is called once per frame
     void Update()
     {
         dir_x = Input.GetAxis("Horizontal");
-        player_anim.SetFloat("velocityx", dir_x*x_speed);
 
 
 
@@ -85,22 +92,25 @@ public class PlayerGroundMovement : MonoBehaviour
             }       
 
         }
-
+        hit = Physics2D.Raycast(transform.position, Vector2.up, raycastDistance);
         if (Input.GetButton("Crouch") && environment.GetComponent<EnvironmentState>().GetState() == EnvState.Right)
         {
-            isCrouching = true;
-
+            Crouch();
         }
-        else
+        else if (!(hit.collider != null && hit.collider.CompareTag("NormalTilemaps"))) // Need to replace this with tilemap tag accordingly
         {
-            isCrouching = false;
+            StandUp();
         }
     }
+
 
     void FixedUpdate()
     {
         if (!dontMove)
         {
+            if (isCrouching && dir_x <0) {
+                dir_x = 0f;
+            }
             if (!(isCrouching && dir_x < 0f)) {
                 player_rb.velocity = new Vector2(dir_x * x_speed, player_rb.velocity.y);
             }
@@ -134,11 +144,13 @@ public class PlayerGroundMovement : MonoBehaviour
         if (dir_x > 0)
         {
             player_sr.flipX = false;
+            player_anim.SetFloat("velocityx", dir_x*x_speed*1000);
             environment.GetComponent<EnvironmentState>().SetState(EnvState.Right);
         }
         else if (dir_x < 0)
         {
             player_sr.flipX = false;
+            player_anim.SetFloat("velocityx", dir_x*x_speed*1000);
             environment.GetComponent<EnvironmentState>().SetState(EnvState.Left);
 
         }
@@ -147,5 +159,20 @@ public class PlayerGroundMovement : MonoBehaviour
     public void changeDontMove(bool val)
     {
         dontMove = val;
+    }
+
+     private void Crouch()
+    {
+        isCrouching = true;
+        crouchingCollider.enabled = true;
+        standingCollider.enabled = false;
+    }
+
+    private void StandUp()
+    {
+        isCrouching = false;
+        standingCollider.enabled = true;
+        crouchingCollider.enabled = false;
+
     }
 }
