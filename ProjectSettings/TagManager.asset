@@ -19,6 +19,7 @@ TagManager:
   - TriggeredPlatform
   - Box
   - WoodenBox
+  - Key
   layers:
   - Default
   - TransparentFX

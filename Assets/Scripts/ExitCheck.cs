@@ -8,7 +8,7 @@ public class ExitCheck : MonoBehaviour
     private GameObject[] enemies;
     private bool exit_open;
     private bool player_near_exit;
-    private int enemy_count;
+    private int num_keys;
     private SpriteRenderer exit_sr;
 
     [SerializeField] private Sprite exit_door_open_normal;
@@ -22,13 +22,16 @@ public class ExitCheck : MonoBehaviour
     void Start()
     {
         exit_sr = GetComponent<SpriteRenderer>();
-        exit_open = true;
+        num_keys = GameObject.FindGameObjectsWithTag("Key").Length;
+        exit_open = false;
         player_near_exit = false;
         environment = GameObject.FindWithTag("Environment");
     }
 
     void Update() {
-
+        if (num_keys==0) {
+            exit_open = true;
+        }
         ShowDoor();
 
         if (exit_open && player_near_exit) {
@@ -52,6 +55,10 @@ public class ExitCheck : MonoBehaviour
                 exit_sr.sprite = exit_door_haunted;
             }
         }
+    }
+
+    public void DecrementKey() {
+        num_keys--;
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
