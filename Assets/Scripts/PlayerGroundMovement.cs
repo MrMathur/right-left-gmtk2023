@@ -27,7 +27,6 @@ public class PlayerGroundMovement : MonoBehaviour
     private bool isGrounded;
     private bool isJumping = false;
     private bool isCrouching;
-    private bool isPulling = false;
 
     // Start is called before the first frame update
     void Start()
@@ -66,7 +65,6 @@ public class PlayerGroundMovement : MonoBehaviour
 
          if (Input.GetButton("Pull") && !isJumping && environment.GetComponent<EnvironmentState>().GetState() == EnvState.Right)
         {
-            isPulling = true;
 
             for (int i = 0; i < box_list.Length; i++) {
                 if (Mathf.Abs(transform.position.y - box_list[i].transform.position.y) < 2f && Mathf.Abs(transform.position.x - box_list[i].transform.position.x) > 1f) {
@@ -81,7 +79,6 @@ public class PlayerGroundMovement : MonoBehaviour
             }       
         }
         else if(Input.GetButtonUp("Pull")) {
-            isPulling = false;
             player_anim.SetBool("isPulling", false);
             for (int i = 0; i < box_list.Length; i++) {
                 box_list[i].GetComponent<BoxPullMovement>().Halt();

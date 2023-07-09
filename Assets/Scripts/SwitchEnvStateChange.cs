@@ -15,6 +15,11 @@ public class SwitchEnvStateChange : MonoBehaviour
 
     [SerializeField] private EnvState active_state;
 
+
+    private bool isRight = false;
+    public Sprite Left;
+    public Sprite Right;
+
     private BoxCollider2D switch_bc;
     private SpriteRenderer switch_sr;
 
@@ -41,6 +46,12 @@ public class SwitchEnvStateChange : MonoBehaviour
         if (conditional_switch) {
             ShowSwitchOnCondition();
         }
+
+        if (isRight) {
+            switch_sr.sprite = Right;
+        } else {
+            switch_sr.sprite = Left;
+        }
     }
 
     private void ShowSwitchOnCondition() {
@@ -55,14 +66,8 @@ public class SwitchEnvStateChange : MonoBehaviour
     }
 
     private void FlipSwitch() {
-        anim.SetTrigger("SwitchHit");
-        EnvState currentState = environment.GetComponent<EnvironmentState>().GetState();
-        if (currentState == EnvState.Left) {
-            environment.GetComponent<EnvironmentState>().SetState(EnvState.Right);
-        } else if (currentState == EnvState.Right) {
-            environment.GetComponent<EnvironmentState>().SetState(EnvState.Left);
-        }
         click_sound.Play();
+        isRight = !isRight;
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
