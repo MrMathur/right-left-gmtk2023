@@ -74,7 +74,7 @@ public class PlayerGroundMovement : MonoBehaviour
         {
 
             for (int i = 0; i < box_list.Length; i++) {
-                if (Mathf.Abs(transform.position.y - box_list[i].transform.position.y) < 2f && Mathf.Abs(transform.position.x - box_list[i].transform.position.x) > 1f) {
+                if (Mathf.Abs(transform.position.y - box_list[i].transform.position.y) < 2f && Mathf.Abs(transform.position.x - box_list[i].transform.position.x) > 1f && transform.position.x - box_list[i].transform.position.x < 0f) {
                     box_list[i].GetComponent<BoxPullMovement>().BoxMoveTo(transform.position);
 
                 } else {

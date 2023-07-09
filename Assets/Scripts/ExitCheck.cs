@@ -35,6 +35,7 @@ public class ExitCheck : MonoBehaviour
         ShowDoor();
 
         if (exit_open && player_near_exit) {
+            PlayerStats.Levels[SceneManager.GetActiveScene().buildIndex-2] = new LevelDetails(SceneManager.GetActiveScene().buildIndex-2, true);
             SceneManager.LoadScene(EnvironmentState.curr_level);
             EnvironmentState.incrementCurrLevel();
         }
