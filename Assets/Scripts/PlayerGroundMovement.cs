@@ -50,25 +50,41 @@ public class PlayerGroundMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && !isJumping && environment.GetComponent<EnvironmentState>().GetState() == EnvState.Left)
         {
             isJumping = true;
+            player_anim.SetBool("isJumping", true);
             player_rb.AddForce(Vector2.up * jump_force, ForceMode2D.Impulse);
 
+        } else {
+            player_anim.SetBool("isJumping", false);
+
+        }
+
+        if (Input.GetButton("Pull")){
+            player_anim.SetBool("isPulling", true);
         }
 
          if (Input.GetButton("Pull") && !isJumping && environment.GetComponent<EnvironmentState>().GetState() == EnvState.Right)
         {
             isPulling = true;
+
             for (int i = 0; i < box_list.Length; i++) {
                 if (Mathf.Abs(transform.position.y - box_list[i].transform.position.y) < 2f && Mathf.Abs(transform.position.x - box_list[i].transform.position.x) > 1f) {
-                    Debug.Log("pull player");
                     box_list[i].GetComponent<BoxPullMovement>().BoxMoveTo(transform.position);
+
                 } else {
                     
                     box_list[i].GetComponent<BoxPullMovement>().Halt();
+                    player_anim.SetBool("isPulling", false);
+
                 }                
             }       
         }
         else if(Input.GetButtonUp("Pull")) {
             isPulling = false;
+            player_anim.SetBool("isPulling", false);
+            for (int i = 0; i < box_list.Length; i++) {
+                box_list[i].GetComponent<BoxPullMovement>().Halt();
+            }       
+
         }
 
         if (Input.GetButton("Crouch") && environment.GetComponent<EnvironmentState>().GetState() == EnvState.Right)
