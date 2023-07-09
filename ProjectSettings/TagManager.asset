@@ -3,7 +3,22 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Enemy
+  - MusicButton
+  - HauntedTilemaps
+  - NormalTilemaps
+  - Environment
+  - Ladder
+  - Projectile
+  - Exit
+  - PlayerVisionCanvas
+  - MaskObject
+  - Jukebox
+  - PauseMenu
+  - TriggeredPlatform
+  - Box
+  - WoodenBox
   layers:
   - Default
   - TransparentFX
@@ -11,7 +26,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Player
   - 
   - 
   - 
@@ -40,4 +55,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Objects
+    uniqueID: 2862471923
+    locked: 0
+  - name: Player
+    uniqueID: 1463513875
     locked: 0
