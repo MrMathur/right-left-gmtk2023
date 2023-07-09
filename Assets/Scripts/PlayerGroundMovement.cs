@@ -102,13 +102,17 @@ public class PlayerGroundMovement : MonoBehaviour
       }
 
     }
-    hit = Physics2D.Raycast(transform.position, Vector2.up, raycastDistance);
+    Vector2 raycastOrigin = new Vector2(transform.position.x, transform.position.y + crouchingCollider.bounds.extents.y);
+    hit = Physics2D.Raycast(raycastOrigin, Vector2.up, raycastDistance);
+
     if (Input.GetButton("Crouch") && environment.GetComponent<EnvironmentState>().GetState() == EnvState.Right)
     {
       Crouch();
+      Debug.Log("Crouchs");
     }
     else if (!(hit.collider != null && hit.collider.CompareTag("NormalTilemaps"))) // Need to replace this with tilemap tag accordingly
     {
+      Debug.Log(hit.collider);
       StandUp();
     }
   }
