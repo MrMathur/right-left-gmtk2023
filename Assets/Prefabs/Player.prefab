@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5521002782868509433}
   - component: {fileID: 4299094284504363520}
   - component: {fileID: 8943864704650637808}
-  m_Layer: 8
+  m_Layer: 6
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5521002782868509439
 SpriteRenderer:
@@ -201,8 +201,8 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.03421545, y: 0.0062074065}
-  m_Size: {x: 0.5649824, y: 1.1164988}
+  m_Offset: {x: 0, y: 0}
+  m_Size: {x: 2, y: 3}
   m_Direction: 0
 --- !u!70 &8943864704650637808
 CapsuleCollider2D:
@@ -236,6 +236,6 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.1}
-  m_Size: {x: 0.6, y: 0.6}
+  m_Offset: {x: 0, y: -0.5}
+  m_Size: {x: 2, y: 2}
   m_Direction: 0

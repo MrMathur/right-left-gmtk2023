@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class EnvironmentTilemapSwitch : MonoBehaviour
 {
-    [SerializeField] private GameObject normal_environment;
-    [SerializeField] private GameObject haunted_environment;
+    // [SerializeField] private GameObject normal_environment;
+    // [SerializeField] private GameObject haunted_environment;
     
     private EnvState current_state;
     private EnvState previous_state;
@@ -22,11 +22,11 @@ public class EnvironmentTilemapSwitch : MonoBehaviour
             previous_state = current_state;
 
             if (current_state == EnvState.Left) {
-                normal_environment.SetActive(true);
-                haunted_environment.SetActive(false);
+                // normal_environment.SetActive(true);
+                // haunted_environment.SetActive(false);
             } else if (current_state == EnvState.Right) {
-                normal_environment.SetActive(false);
-                haunted_environment.SetActive(true);
+                // normal_environment.SetActive(false);
+                // haunted_environment.SetActive(true);
             }
         }
     }

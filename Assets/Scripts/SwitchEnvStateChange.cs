@@ -38,7 +38,7 @@ public class SwitchEnvStateChange : MonoBehaviour
     }
 
     void Update() {
-        if (player_near_switch && Input.GetButtonDown("Jump")) {
+        if (player_near_switch) {
             FlipSwitch();
             MoveAllTriggeredPlatforms();
         }
@@ -66,8 +66,10 @@ public class SwitchEnvStateChange : MonoBehaviour
     }
 
     private void FlipSwitch() {
-        click_sound.Play();
-        isRight = !isRight;
+        if (!isRight) {
+            click_sound.Play();
+            isRight = true;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider) {
