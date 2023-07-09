@@ -6,41 +6,48 @@ using UnityEngine.SceneManagement;
 public class MenuFunctions : MonoBehaviour
 {
 
-    private int menuIndex = 0;
-    private int levelSelectIndex = 1;
-    private int startIndex = 2;
-    private int creditsIndex = 13;
-    
-    private GameObject env;
+  private int menuIndex = 0;
+  private int levelSelectIndex = 1;
+  private int startIndex = 2;
+  private int creditsIndex = 13;
 
-    private void Start() {
-        env = GameObject.FindGameObjectsWithTag("Environment")[0];
-        
-        // creditsIndex = SceneManager.sceneCountInBuildSettings-1;     
-    }
+  private GameObject env;
 
-    public void StartGame() {       
-        SceneManager.LoadScene(startIndex, LoadSceneMode.Single);
-    }
+  private void Start()
+  {
+    // env = GameObject.FindGameObjectsWithTag("Environment")[0];
 
-    public void LoadMainMenu() {
-        SceneManager.LoadScene(menuIndex, LoadSceneMode.Single);
-    }
+    // creditsIndex = SceneManager.sceneCountInBuildSettings-1;     
+  }
 
-    public void LoadCredits() {
-        SceneManager.LoadScene(creditsIndex, LoadSceneMode.Single);
-    }
+  public void StartGame()
+  {
+    SceneManager.LoadScene(startIndex, LoadSceneMode.Single);
+  }
 
-    public void RestartScene() {
-        Scene scene = SceneManager.GetActiveScene();
-        SceneManager.LoadScene(scene.name);
-    }
+  public void LoadMainMenu()
+  {
+    SceneManager.LoadScene(menuIndex, LoadSceneMode.Single);
+  }
 
-    public void LoadLevelSelectMenu() {
-        SceneManager.LoadScene(levelSelectIndex, LoadSceneMode.Single);
-    }
+  public void LoadCredits()
+  {
+    SceneManager.LoadScene(creditsIndex, LoadSceneMode.Single);
+  }
 
-    public void ToggleMute() {
-        env.GetComponent<AudioSource>().mute = !env.GetComponent<AudioSource>().mute;
-    }
+  public void RestartScene()
+  {
+    Scene scene = SceneManager.GetActiveScene();
+    SceneManager.LoadScene(scene.name);
+  }
+
+  public void LoadLevelSelectMenu()
+  {
+    SceneManager.LoadScene(levelSelectIndex, LoadSceneMode.Single);
+  }
+
+  public void ToggleMute()
+  {
+    env.GetComponent<AudioSource>().mute = !env.GetComponent<AudioSource>().mute;
+  }
 }

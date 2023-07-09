@@ -159,7 +159,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 263, y: -303}
+  m_AnchoredPosition: {x: 270, y: -315}
   m_SizeDelta: {x: 336.942, y: 56.4528}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &554608972
@@ -184,10 +184,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 264405d3dc8f24079974e2aef703f7d0, type: 3}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 72
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -268,6 +268,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 7385635326248265011, guid: 0872684464003426b9248abc6b05df3d, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9098763050888093952, guid: 0872684464003426b9248abc6b05df3d, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -680,7 +684,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 263, y: -415}
+  m_AnchoredPosition: {x: 270, y: -427}
   m_SizeDelta: {x: 395.2459, y: 59.4981}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1452770348
@@ -705,10 +709,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 264405d3dc8f24079974e2aef703f7d0, type: 3}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 72
     m_Alignment: 1
     m_AlignByGeometry: 0
@@ -885,7 +889,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 263, y: -513}
+  m_AnchoredPosition: {x: 270, y: -525}
   m_SizeDelta: {x: 247.05, y: 41.2266}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2026890544
@@ -910,10 +914,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 264405d3dc8f24079974e2aef703f7d0, type: 3}
-    m_FontSize: 24
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 2
+    m_MinSize: 0
     m_MaxSize: 72
     m_Alignment: 1
     m_AlignByGeometry: 0
