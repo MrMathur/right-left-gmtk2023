@@ -14,21 +14,21 @@ public class BoxPullMovement : MonoBehaviour
   private Animator boxAnimation;
   public Sprite normal;
   public Sprite isPulled;
-  private SpriteRenderer renderer;
+  private SpriteRenderer sr_render;
   private bool isNormal = true;
 
   private void Start() {
     environment = GameObject.FindWithTag("Environment");
     player = GameObject.FindWithTag("Player");
-    renderer = GetComponent<SpriteRenderer>();
+    sr_render = GetComponent<SpriteRenderer>();
   }
 
   private void Update() {
 
       if (isNormal) {
-        renderer.sprite = normal;
+        sr_render.sprite = normal;
       } else {
-        renderer.sprite = isPulled;
+        sr_render.sprite = isPulled;
       }
   }
 
