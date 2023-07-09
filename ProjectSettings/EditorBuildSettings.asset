@@ -12,6 +12,18 @@ EditorBuildSettings:
     path: Assets/Scenes/levelSelectScene.unity
     guid: cc71a2e6736c84a69a7de713a9976692
   - enabled: 1
+    path: Assets/Scenes/Tut1.unity
+    guid: 9cb0cb0cac05d41fdb0e1fde865a7c54
+  - enabled: 1
+    path: Assets/Scenes/Tut2.unity
+    guid: 6af0a2f35b8bc4959bf3861abb6ff524
+  - enabled: 1
+    path: Assets/Scenes/Tut3.unity
+    guid: a3c596066511446619dfe4d347901b0d
+  - enabled: 1
+    path: Assets/Scenes/Tut4.unity
+    guid: 024ea0f16c30a4fefa789f4e89f03c5d
+  - enabled: 1
     path: Assets/Scenes/Level0.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 0

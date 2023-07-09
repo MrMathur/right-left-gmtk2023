@@ -19,7 +19,7 @@ public class LevelSelectBasic : MonoBehaviour
     }
 
     public void selectLevel(int levelIndex) {
-        SceneManager.LoadScene(levelIndex);
+        SceneManager.LoadScene(levelIndex+4);
     }
 
     // Update is called once per frame

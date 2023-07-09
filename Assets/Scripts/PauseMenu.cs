@@ -8,16 +8,13 @@ public class PauseMenu : MonoBehaviour
 {
    [SerializeField] GameObject instance;
    private GameObject playerVisionCanvas;
-    [SerializeField] GameObject soundButton;
-    [SerializeField] Sprite soundOn;
-    [SerializeField] Sprite soundOff;
 
    void Start() {
-        if (EnvironmentState.play_music) {
-            soundButton.transform.GetChild(0).GetComponent<Image>().sprite = soundOn;
-        } else {
-            soundButton.transform.GetChild(0).GetComponent<Image>().sprite = soundOff;
-        }
+        // if (EnvironmentState.play_music) {
+        //     soundButton.transform.GetChild(0).GetComponent<Image>().sprite = soundOn;
+        // } else {
+        //     soundButton.transform.GetChild(0).GetComponent<Image>().sprite = soundOff;
+        // }
    }
 
     public void Pause() {
@@ -44,13 +41,13 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void  MusicToggle() {
-        EnvironmentState.ToggleMusic();
-        if (EnvironmentState.play_music) {
-            soundButton.transform.GetChild(0).GetComponent<Image>().sprite = soundOn;
-        } else {
-            soundButton.transform.GetChild(0).GetComponent<Image>().sprite = soundOff;
-        }
+    // public void  MusicToggle() {
+    //     EnvironmentState.ToggleMusic();
+    //     if (EnvironmentState.play_music) {
+    //         soundButton.transform.GetChild(0).GetComponent<Image>().sprite = soundOn;
+    //     } else {
+    //         soundButton.transform.GetChild(0).GetComponent<Image>().sprite = soundOff;
+    //     }
 
-    }   
+    // }   
 }
