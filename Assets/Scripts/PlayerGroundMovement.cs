@@ -93,14 +93,15 @@ public class PlayerGroundMovement : MonoBehaviour
         if (!dontMove)
         {
             player_rb.velocity = new Vector2(dir_x * x_speed, player_rb.velocity.y);
+            player_anim.SetFloat("velocityx", dir_x*x_speed);
 
             if (Mathf.Abs(dir_x) > 0f)
             {
-                player_anim.SetBool("Player_Walking", true);
+                // player_anim.SetBool("male_walking", true);
             }
             else
             {
-                player_anim.SetBool("Player_Walking", false);
+                // player_anim.SetBool("male_walking", false);
                 isJumping = false;
             }
 
@@ -116,7 +117,7 @@ public class PlayerGroundMovement : MonoBehaviour
         }
         else
         {
-            player_anim.SetBool("Player_Walking", false);
+            // player_anim.SetBool("male_walking", false);
             // player_anim.SetBool("Player_Crouching", false);
         }
 
@@ -127,7 +128,7 @@ public class PlayerGroundMovement : MonoBehaviour
         }
         else if (dir_x < 0)
         {
-            player_sr.flipX = true;
+            player_sr.flipX = false;
             environment.GetComponent<EnvironmentState>().SetState(EnvState.Left);
 
         }
