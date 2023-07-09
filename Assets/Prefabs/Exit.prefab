@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: -1432495373
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d7ee9cbb0be6048a19276c2a799e7498, type: 3}
+  m_Sprite: {fileID: 21300000, guid: eadd410be900348928b0706ef29fb9f0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -98,10 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 814907fd4a8084395977f21bb09d6ac8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  exit_door_open_normal: {fileID: 21300000, guid: d7ee9cbb0be6048a19276c2a799e7498, type: 3}
-  exit_door_open_haunted: {fileID: 21300000, guid: 6a7ef6e5cfaef4dcb855d91502a95bea, type: 3}
-  exit_door_normal: {fileID: 21300000, guid: 05d4716d31ac4472ca3971f289ccbf0e, type: 3}
-  exit_door_haunted: {fileID: 21300000, guid: c6474aee623314720a4b207f04c1cec6, type: 3}
+  exit_door_open_normal: {fileID: 21300000, guid: eadd410be900348928b0706ef29fb9f0, type: 3}
+  exit_door_open_haunted: {fileID: 21300000, guid: eadd410be900348928b0706ef29fb9f0, type: 3}
+  exit_door_normal: {fileID: 21300000, guid: 82a87d7e8bd9145c397470eb9abe8fb1, type: 3}
+  exit_door_haunted: {fileID: 21300000, guid: 82a87d7e8bd9145c397470eb9abe8fb1, type: 3}
 --- !u!61 &1971291735627452458
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -134,16 +134,16 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.13513231, y: 0}
+  m_Offset: {x: -0.010193348, y: -0.03027609}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
+    oldSize: {x: 0.64, y: 0.96}
     newSize: {x: 0.46, y: 0.56}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.3995771, y: 2}
+  m_Size: {x: 0.77564335, y: 0.95446295}
   m_EdgeRadius: 0
