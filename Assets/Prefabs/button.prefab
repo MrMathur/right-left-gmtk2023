@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &411172246808788889
 SpriteRenderer:
@@ -244,3 +244,4 @@ MonoBehaviour:
   active_state: 0
   PressedSprite: {fileID: 21300000, guid: f1c37bd8cbd1c4b1084b4828177c9eb1, type: 3}
   NotPressedSprite: {fileID: 21300000, guid: 8f53e962c5e694c30a88731a4a7f62bf, type: 3}
+  contControl: 1
