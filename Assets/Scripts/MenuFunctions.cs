@@ -9,7 +9,7 @@ public class MenuFunctions : MonoBehaviour
   private int menuIndex = 0;
   private int levelSelectIndex = 1;
   private int startIndex = 2;
-  private int creditsIndex = 13;
+  private int creditsIndex = 11;
   private int mainGameIndex = 6;
 
   private GameObject env;
